@@ -9,7 +9,7 @@
 }
 
 .input__label {
-  color: $blue-dark;
+  color: $label-color;
   opacity: 0.7;
   margin-bottom: 5px;
   white-space: nowrap;
@@ -21,13 +21,13 @@
   box-sizing: border-box;
   padding: 10px 12px;
   outline: none;
-  border: 1px solid $grey-light;
+  border: 1px solid $input-border-color;
   border-radius: $border-radius;
   background-color: $white;
   color: $black;
 
   &:focus {
-    border: 1px solid $grey-light;
+    border: 1px solid $input-border-color;
     outline: none;
   }
 

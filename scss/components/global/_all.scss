@@ -1,11 +1,11 @@
 @import 'reset';
 // variables first
-@import 'shadows';
+@import 'breakpoints';
 @import 'animations';
 @import 'colors';
 @import 'gradients';
 @import 'layout-variables';
-@import 'breakpoints';
+@import 'shadows';
 
 // then functions and mixins and base css
 @import 'layout-functions';
