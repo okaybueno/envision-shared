@@ -1,31 +1,31 @@
-$font-load-path: '/assets/fonts/';
+$font-load-path: '/assets/fonts';
 
 @font-face {
   font-family: 'Suisse Intl';
   font-style: normal;
   font-display: block;
-  src: url('/assets/fonts/SuisseIntl-Regular-WebM.woff2') format('woff2'), url('/assets/fonts/SuisseIntl-Regular-WebM.woff') format('woff');
+  src: url( $font-load-path + '/SuisseIntl-Regular-WebM.woff2') format('woff2'), url( $font-load-path + '/SuisseIntl-Regular-WebM.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Suisse Intl Medium';
   font-style: normal;
   font-display: block;
-  src: url('/assets/fonts/SuisseIntl-Medium-WebM.woff2') format('woff2'), url('/assets/fonts/SuisseIntl-Medium-WebM.woff') format('woff');
+  src: url( $font-load-path + '/SuisseIntl-Medium-WebM.woff2') format('woff2'), url( $font-load-path + '/SuisseIntl-Medium-WebM.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Suisse Intl SemiBold';
   font-style: normal;
   font-display: block;
-  src: url('/assets/fonts/SuisseIntl-SemiBold-WebM.woff2') format('woff2'), url('/assets/fonts/SuisseIntl-SemiBold-WebM.woff') format('woff');
+  src: url( $font-load-path + '/SuisseIntl-SemiBold-WebM.woff2') format('woff2'), url( $font-load-path + '/SuisseIntl-SemiBold-WebM.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Suisse Intl Bold';
   font-style: normal;
   font-display: block;
-  src: url('/assets/fonts/SuisseIntl-Bold-WebM.woff2') format('woff2'), url('/assets/fonts/SuisseIntl-Bold-WebM.woff') format('woff');
+  src: url( $font-load-path + '/SuisseIntl-Bold-WebM.woff2') format('woff2'), url( $font-load-path + '/SuisseIntl-Bold-WebM.woff') format('woff');
 }
 
 
