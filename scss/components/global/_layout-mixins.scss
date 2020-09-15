@@ -1,0 +1,161 @@
+// Generic Grid Wrapper Class
+@mixin grid-wrapper($breakpoints: null) {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  @if (index($breakpoints, 'mobile') or $breakpoints == null) {
+    padding-left: $grid-o-gutter--mob;
+    padding-right: $grid-o-gutter--mob;
+  }
+
+  @if (index($breakpoints, 'tablet-small') or $breakpoints == null) {
+    @include mq('tablet-small') {
+      padding-left: $grid-o-gutter--tab;
+      padding-right: $grid-o-gutter--tab;
+    }
+  }
+
+  @if (index($breakpoints, 'desktop') or $breakpoints == null) {
+    @include mq('desktop') {
+      padding-left: $grid-o-gutter--dtp;
+      padding-right: $grid-o-gutter--dtp;
+    }
+  }
+}
+
+@mixin grid-el-res($mobile-cols: false, $tablet-cols: false, $desktop-cols: false) {
+  // variables specify the number of columns which each individual element spans
+
+  @if ($mobile-cols) {
+    width: grid-el-mob($mobile-cols);
+  }
+
+  @if ($tablet-cols) {
+    @include mq('tablet-small') {
+      width: grid-el-tab($tablet-cols);
+    }
+  }
+
+  @if ($desktop-cols) {
+    @include mq('desktop') {
+      width: grid-el-dtp($desktop-cols);
+    }
+  }
+}
+
+@mixin grid-row-mrg($row-els-mobile: null, $row-els-tablet: null, $row-els-desktop: null ) {
+  // variables specify the number of elements per row
+  max-width: 100%;
+
+  @if ($row-els-mobile) {
+    margin-right: $grid-i-gutter--mob;
+    &:nth-child(#{$row-els-mobile}n) {
+      margin-right: 0;
+    }
+  }
+
+  @if ($row-els-tablet) {
+    @include mq('tablet') {
+      margin-right: $grid-i-gutter--tab;
+      &:nth-child(#{$row-els-mobile}n) {
+        margin-right: $grid-i-gutter--tab;
+      }
+      &:nth-child(#{$row-els-tablet}n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @if ($row-els-desktop) {
+    @include mq('desktop') {
+      margin-right: $grid-i-gutter--dtp;
+      &:nth-child(#{$row-els-mobile}n) {
+        margin-right: $grid-i-gutter--dtp;
+      }
+      &:nth-child(#{$row-els-tablet}n) {
+        margin-right: $grid-i-gutter--dtp;
+      }
+      &:nth-child(#{$row-els-desktop}n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// example usage: @include property-with-gutter('right');
+@mixin property-with-gutter($property, $breakpoints: null, $grid-gutter: 'outer') {
+
+  @if (index($breakpoints, 'mobile') or $breakpoints == null) {
+    #{$property}: if($grid-gutter == 'outer', $grid-o-gutter--mob, $grid-i-gutter--mob);
+  }
+
+  @if (index($breakpoints, 'tablet') or $breakpoints == null) {
+    @include mq('tablet') {
+      #{$property}: if($grid-gutter == 'outer', $grid-o-gutter--tab, $grid-i-gutter--tab);
+    }
+  }
+
+  @if (index($breakpoints, 'desktop') or $breakpoints == null) {
+    @include mq('desktop') {
+      #{$property}: if($grid-gutter == 'outer', $grid-o-gutter--dtp, $grid-i-gutter--dtp);
+    }
+  }
+}
+
+@mixin image-fit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+%background-image {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 28px;
+    bottom: 8px;
+    left: 15px;
+    right: 15px;
+    opacity: .66;
+    box-shadow: $shadow-image-after;
+
+    @include mq('tablet-small') {
+      top: 32px;
+      left: 18px;
+      right: 18px;
+    }
+
+    @include mq('desktop') {
+      top: 48px;
+      left: 24px;
+      right: 24px;
+    }
+  }
+}
+
+@mixin backface-visibility {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+}

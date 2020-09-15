@@ -1,0 +1,27 @@
+:root {
+  --vh-adjusted: 1vh;
+  --notification-height: 68px;
+
+  @include mq('tablet-small') {
+    --notification-height: 54px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  &.stop-scrolling {
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+label {
+  user-select: none;
+}

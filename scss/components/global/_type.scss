@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Suisse Intl';
+  font-style: normal;
+  font-display: block;
+  src: url('/assets/fonts/SuisseIntl-Regular-WebM.woff2') format('woff2'), url('/assets/fonts/SuisseIntl-Regular-WebM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl Medium';
+  font-style: normal;
+  font-display: block;
+  src: url('/assets/fonts/SuisseIntl-Medium-WebM.woff2') format('woff2'), url('/assets/fonts/SuisseIntl-Medium-WebM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl SemiBold';
+  font-style: normal;
+  font-display: block;
+  src: url('/assets/fonts/SuisseIntl-SemiBold-WebM.woff2') format('woff2'), url('/assets/fonts/SuisseIntl-SemiBold-WebM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl Bold';
+  font-style: normal;
+  font-display: block;
+  src: url('/assets/fonts/SuisseIntl-Bold-WebM.woff2') format('woff2'), url('/assets/fonts/SuisseIntl-Bold-WebM.woff') format('woff');
+}
+
+
+html {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  color: $black;
+  line-height: 160%;
+  letter-spacing: .01rem;
+}
+
+button,
+input,
+textarea,
+li,
+a {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  cursor: default;
+}
+
+
+h1 {
+  font-family: 'Suisse Intl Medium', sans-serif;
+  font-size: 2.75rem;
+  line-height: 100%;
+
+  @include mq('tablet') {
+    font-size: 3rem;
+  }
+
+  @include mq('desktop') {
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  font-family: 'Suisse Intl Medium', sans-serif;
+  font-size: 2rem;
+  line-height: 115%;
+
+  @include mq('desktop') {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-family: 'Suisse Intl SemiBold', sans-serif;
+  font-size: 1.5rem;
+  line-height: 140%;
+
+  @include mq('desktop') {
+    font-size: 1.625rem;
+  }
+
+  @include mq('desktop') {
+    font-size: 1.8125rem;
+  }
+}
+
+h4 {
+  font-family: 'Suisse Intl SemiBold', sans-serif;
+  color: $text-primary;
+  text-transform: uppercase;
+  font-size: $size-s;
+  letter-spacing: 0.14rem;
+  line-height: 186%;
+}
+
+h5 {
+  font-family: inherit;
+  letter-spacing: 0.01rem;
+  line-height: 160%;
+  color: $text-secondary;
+  font-size: 15px;
+
+  @include mq('desktop') {
+    font-size: 1rem;
+  }
+}
+
+p,
+a,
+li,
+input,
+textarea {
+  color: inherit;
+  font-size: 15px;
+
+  @include mq('desktop') {
+    font-size: 1rem;
+  }
+}
+
+button {
+  font-size: 1rem;
+  line-height: 100%;
+  white-space: nowrap;
+}
+
+p,
+li {
+  line-height: 160%;
+}
+
+a {
+  outline: none;
+  font-size: 1.125rem;
+
+  @include mq('desktop') {
+    font-size: $size-s;
+    letter-spacing: 0.02rem;
+  }
+
+}
+
+p {
+  a {
+    font-size: 15px;
+    line-height: 160%;
+
+    @include mq('desktop') {
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+  }
+}
+
+ul {
+  li {
+    list-style: disc;
+  }
+}
+
+ol {
+  li {
+    list-style: decimal;
+  }
+}
+
+label {
+  font-size: .875rem;
+  line-height: 143%;
+  color: $grey;
+}
+
+input, textarea {
+  line-height: 100%;
+  font-size: .875rem;
+
+  &::placeholder {
+    font-family: 'Suisse Intl', sans-serif;
+    color: $placeholder-color;
+    font-size: .875rem;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-family: 'Suisse Intl SemiBold', sans-serif;
+}
+
+textarea {
+  min-height: 6rem;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -.5rem;
+  font-size: .75em;
+}
+
+sub {
+  top: .5rem;
+}
+
+
+.text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
