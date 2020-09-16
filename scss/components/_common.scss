@@ -1,0 +1,32 @@
+.mb {
+  &__xxs {
+    margin-bottom: $size-xxs;
+  }
+  &__xs {
+    margin-bottom: $size-xs;
+  }
+  &__sm {
+    margin-bottom: $size-sm;
+  }
+  &__s {
+    margin-bottom: $size-s;
+  }
+  &__m {
+    margin-bottom: $size-m;
+  }
+  &__ml {
+    margin-bottom: $size-ml;
+  }
+  &__l {
+    margin-bottom: $size-l;
+  }
+  &__xl {
+    margin-bottom: $size-xl;
+  }
+  &__xl-plus {
+    margin-bottom: $size-xl + 1rem;
+  }
+  &__xxl {
+    margin-bottom: $size-xxl;
+  }
+}
