@@ -30,7 +30,7 @@ $grid-i-gutter--dtp: $size-m;
 
 $border-radius: 4px;
 $input-padding: 10px 12px;
-$input-height: 36px;
+$input-height: 43px;
 
 
 // z-index hierarchy function
@@ -44,13 +44,13 @@ $input-height: 36px;
 }
 
 $z-indexes: (
-        'modal',
-        'logo',
-        'nav',
-        'notification',
-        'toast',
-        'loader',
-        'action',
-        'content',
-        'bg'
+    'modal',
+    'logo',
+    'nav',
+    'notification',
+    'toast',
+    'loader',
+    'action',
+    'content',
+    'bg'
 ) !default;

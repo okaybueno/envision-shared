@@ -1,0 +1,117 @@
+$dropdown-selected-height: $input-height;
+$dropdown-item-hover-bg: $grey-light-bg;
+$dropdown-item-active-bg: $grey-light-bg;
+
+.dropdown {
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+    
+  &__toggle {
+    position: relative;
+    color: $black;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Suisse Intl Medium', sans-serif;
+    height: $dropdown-selected-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-secondary;
+
+    &:hover {
+        cursor: pointer;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    position: absolute;
+    top: $dropdown-selected-height;
+    left: 0;
+    z-index: 1000;
+    margin: -1px 0 0;
+    list-style: none;
+    overflow-y: auto;
+    max-height: 350px;
+    border-color: $input-border-color;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    li {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+  }
+
+  &__item {
+    display: block;
+    clear: both;
+    color: $black;
+    white-space: nowrap;
+    text-decoration: none;
+    user-select: none;
+    box-sizing: border-box;
+    height: $dropdown-selected-height;
+    padding: $input-padding;
+    background-color: $white;
+
+    &:hover {
+        background-color: $dropdown-item-hover-bg;
+    }
+
+    &--active {
+        background-color: $dropdown-item-active-bg;
+        // to set if needed
+    }
+  }
+
+  &__selected {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.1rem;
+    z-index: 2;
+    cursor: pointer;
+    width: 100%;
+
+    &--placeholder {
+      color: $placeholder-color;
+    }
+
+    &--show {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+ .caret {
+    z-index: 2;
+
+    position: absolute;
+    right: 12px;
+    top: 48%;
+
+    width: 9px;
+    height: 9px;
+    border-bottom: 1px solid $black;
+    border-left: 1px solid $black;
+
+    transform: translateY(-50%) rotate(-45deg);
+    transform-origin: 3px 6px;
+
+    transition: transform .5s ease;
+
+    &--active {
+       transform: translateY(-50%) rotate( 135deg );
+    }
+ }
+}

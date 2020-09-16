@@ -1,0 +1,136 @@
+.checkbox {
+  &__container {
+    cursor: pointer;
+    font-size: $size-s;
+    white-space: pre-line;
+    hyphens: auto;
+    font-family: 'Suisse Intl', sans-serif;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__input {
+    visibility: hidden;
+    position: absolute;
+
+    &:checked ~ .checkbox__custom-input--normal {
+      border-color: $text-highlight;
+
+      &::before {
+        transform: scale(1) rotate(-45deg);
+        transition: transform .12s ease-out;
+      }
+    }
+
+    &:checked ~ .checkbox__custom-input--square::before {
+      transform: scale(1);
+      transition: transform .12s ease-out;
+    }
+
+    &:checked ~ .checkbox__label {
+      color: $text-highlight;
+      a {
+        color: $text-highlight;
+      }
+    }
+
+
+    &--error ~ .checkbox__custom-input {
+      border: 1px solid $alert;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    font-size: $size-s;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+
+    &--error {
+      color: $alert;
+    }
+
+    p,
+    a {
+      font-size: $size-s;
+    }
+
+    a {
+      font-family: 'Suisse Intl Medium', sans-serif;
+    }
+  }
+
+  &__custom-input {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $size-s;
+    position: relative;
+
+    cursor: pointer;
+    flex-shrink: 0;
+
+
+    &::before {
+      content: "";
+      position: relative;
+    }
+
+    &--normal {
+      height: $size-base;
+      width: $size-base;
+      margin-right: $size-xxxs;
+      border: 1px solid $white;
+      border-radius: $border-radius;
+      transform: translateY(-.125rem);
+
+      &::before {
+        border: 1px solid $text-highlight;
+        border-top-width: 0;
+        border-right-width: 0;
+        width: 0.45rem;
+        height: 0.2rem;
+        transform: scale(0) rotate(-45deg);
+        transition: transform .06s ease-out;
+        transform-origin: center;
+        border-radius: 1px;
+        bottom: 1px;
+      }
+    }
+
+    // NOT CURRENTLY USED (waiting for checkout ui design
+    &--square {
+      margin-right: 1.2rem;
+      height: 24px;
+      width: 24px;
+      background-color: $white;
+
+      &::before {
+        background-color: $text-highlight;
+        width: 12px;
+        height: 12px;
+        transform: scale(0);
+        transition: transform .06s ease-out;
+      }
+    }
+
+    &--error ~ .checkbox__label {
+      color: $alert;
+    }
+  }
+}
+
+.checkbox-row {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+  .checkbox__container {
+    margin-right: $size-ml;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
