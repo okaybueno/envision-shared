@@ -50,17 +50,17 @@
     z-index: -1;
   }
 
-  //&--no-style {
-  //  color: $black;
-  //  background: $white;
-  //
-  //  &:hover,
-  //  &:focus {
-  //    &::after {
-  //      box-shadow: none;
-  //    }
-  //  }
-  //}
+  &--no-style {
+    color: $black;
+    background: $white;
+
+    &:hover,
+    &:focus {
+      &::after {
+        box-shadow: none;
+      }
+    }
+  }
 
   &--primary {
     color: $white;
