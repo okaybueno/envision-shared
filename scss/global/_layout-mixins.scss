@@ -84,7 +84,7 @@
 }
 
 // example usage: @include property-with-gutter('right');
-@mixin property-with-gutter($property, $breakpoints: null, $grid-gutter: 'outer') {
+@mixin property-with-gutter($property, $grid-gutter: 'outer', $breakpoints: null) {
 
   @if (index($breakpoints, 'mobile') or $breakpoints == null) {
     #{$property}: if($grid-gutter == 'outer', $grid-o-gutter--mob, $grid-i-gutter--mob);
