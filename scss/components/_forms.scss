@@ -9,11 +9,7 @@
 }
 
 .input__label {
-  color: $label-color;
-  opacity: 0.7;
-  margin-bottom: 5px;
-  white-space: nowrap;
-  font-family: 'Suisse Intl Medium', sans-serif;
+
 }
 
 .input,
@@ -33,6 +29,22 @@
 
   &--error {
     border: 1px solid $alert;
+  }
+}
+
+.input {
+  height: $input-height;
+
+  &__label {
+    color: $label-color;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    font-family: 'Suisse Intl Medium', sans-serif;
+
+    &--error {
+      color: $alert;
+    }
   }
 }
 

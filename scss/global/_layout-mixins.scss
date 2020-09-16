@@ -56,7 +56,7 @@
   }
 
   @if ($row-els-tablet) {
-    @include mq('tablet') {
+    @include mq('tablet-small') {
       margin-right: $grid-i-gutter--tab;
       &:nth-child(#{$row-els-mobile}n) {
         margin-right: $grid-i-gutter--tab;
@@ -90,8 +90,8 @@
     #{$property}: if($grid-gutter == 'outer', $grid-o-gutter--mob, $grid-i-gutter--mob);
   }
 
-  @if (index($breakpoints, 'tablet') or $breakpoints == null) {
-    @include mq('tablet') {
+  @if (index($breakpoints, 'tablet') or index($breakpoints, 'tablet-small') or $breakpoints == null) {
+    @include mq('tablet-small') {
       #{$property}: if($grid-gutter == 'outer', $grid-o-gutter--tab, $grid-i-gutter--tab);
     }
   }

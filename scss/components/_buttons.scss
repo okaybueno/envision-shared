@@ -1,0 +1,125 @@
+.button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: $size-s $size-ml;
+  outline: none;
+  border: 0;
+  border-radius: $border-radius;
+  user-select: none;
+  white-space: nowrap;
+  transition: transform .24s linear;
+  z-index: 1;
+  font-size: $size-s;
+
+
+  &:hover,
+  &:focus {
+    &::before {
+      box-shadow: $shadow-button;
+      opacity: .8;
+      transition: box-shadow .24s linear;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.06);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    right: 4px;
+    bottom: 0;
+    box-shadow: $shadow-button;
+    opacity: .66;
+    transition: box-shadow .4s ease;
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    border-radius: $border-radius;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  //&--no-style {
+  //  color: $black;
+  //  background: $white;
+  //
+  //  &:hover,
+  //  &:focus {
+  //    &::after {
+  //      box-shadow: none;
+  //    }
+  //  }
+  //}
+
+  &--primary {
+    color: $white;
+
+    &::after {
+      background: $gradient-button;
+    }
+  }
+
+  &--secondary {
+    color: $white;
+
+    &::after {
+      background-color: $blue-dark;
+    }
+  }
+
+  &--inverted {
+    border: 1px solid $white;
+    color: $white;
+
+    &::after, &::before {
+      content: unset;
+    }
+  }
+
+  &--disabled {
+    border: 0;
+    color: $white;
+    cursor: default;
+
+    &:after {
+      background: $grey-light;
+    }
+
+    &::before {
+      content: unset;
+    }
+
+    &:hover {
+      transform: unset;
+    }
+  }
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-grow: 1;
+
+  @include mq('tablet-small') {
+    justify-content: flex-end;
+  }
+
+  .button {
+    &:not(:first-child) {
+      @include property-with-gutter('margin-left', 'inner');
+    }
+  }
+}
+
