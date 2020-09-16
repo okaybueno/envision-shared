@@ -29,7 +29,6 @@ $shadow-button: 0px 3px 26px #8681E6;
     left: 15px;
     right: 15px;
     opacity: .66;
-    box-shadow: $shadow-image-after;
 
     @include mq('tablet-small') {
       top: 32px;

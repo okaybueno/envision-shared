@@ -1,9 +1,9 @@
 $breakpoints: (
-        'tablet-small': 501px,
+        'tablet-small': 481px,
         'tablet': 769px,
-        'desktop': 1001px,
+        'desktop': 1041px,
         'desktop-mid': 1280px,
-        'desktop-wide': 1441px
+        'desktop-wide': 1481px
 );
 
 @mixin mq($width) {

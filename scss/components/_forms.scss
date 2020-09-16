@@ -19,7 +19,7 @@
 .input,
 .textarea {
   box-sizing: border-box;
-  padding: 10px 12px;
+  padding: $input-padding;
   outline: none;
   border: 1px solid $input-border-color;
   border-radius: $border-radius;

@@ -5,7 +5,8 @@ $size-xxs: .625rem;
 $size-xs: .75rem;
 $size-s: .875rem;
 $size-base: 1rem;
-$size-m: 1.25rem;
+$size-base: 1rem;
+$size-sm: 1.12rem;
 $size-ml: 1.5rem;
 $size-xml: 1.75rem;
 $size-l: 2rem;
@@ -28,9 +29,9 @@ $grid-i-gutter--dtp: $size-m;
 // UI Variables
 
 $border-radius: 4px;
-$nav-height: 4.75rem;
-$notification-height--dtp: 2.875rem;
-$notification-height--mob: 4.25rem;
+$input-padding: 10px 12px;
+$input-height: 36px;
+
 
 // z-index hierarchy function
 // https://codepen.io/okay_alex/pen/xBVoxV
@@ -52,4 +53,4 @@ $z-indexes: (
         'action',
         'content',
         'bg'
-);
+) !default;
