@@ -54,6 +54,10 @@
     color: $black;
     background: $white;
 
+    &::after, &::before {
+      content: unset;
+    }
+
     &:hover,
     &:focus {
       &::after {
