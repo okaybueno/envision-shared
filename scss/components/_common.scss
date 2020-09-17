@@ -5,11 +5,14 @@
   &__xs {
     margin-bottom: $size-xs;
   }
-  &__sm {
-    margin-bottom: $size-sm;
-  }
   &__s {
     margin-bottom: $size-s;
+  }
+  &__base {
+    margin-bottom: $size-base;
+  }
+  &__sm {
+    margin-bottom: $size-sm;
   }
   &__m {
     margin-bottom: $size-m;

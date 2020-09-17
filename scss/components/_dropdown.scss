@@ -12,7 +12,7 @@ $dropdown-item-active-bg: $grey-light-bg;
     color: $black;
     width: 100%;
     box-sizing: border-box;
-    font-family: 'Suisse Intl Medium', sans-serif;
+    font-family: 'Suisse Intl', sans-serif;
     height: $dropdown-selected-height;
     display: flex;
     align-items: center;
@@ -63,6 +63,8 @@ $dropdown-item-active-bg: $grey-light-bg;
     height: $dropdown-selected-height;
     padding: $input-padding;
     background-color: $white;
+    font-size: .875rem;
+    font-family: 'Suisse Intl', sans-serif;
 
     &:hover {
         background-color: $dropdown-item-hover-bg;
