@@ -14,7 +14,7 @@
     position: absolute;
 
     &:checked ~ .checkbox__custom-input--normal {
-      border-color: $text-highlight;
+      border-color: $text-primary;
 
       &::before {
         transform: scale(1) rotate(-45deg);
@@ -28,9 +28,9 @@
     }
 
     &:checked ~ .checkbox__label {
-      color: $text-highlight;
+      color: $text-primary;
       a {
-        color: $text-highlight;
+        color: $text-primary;
       }
     }
 
@@ -86,7 +86,7 @@
       transform: translateY(-.125rem);
 
       &::before {
-        border: 1px solid $text-highlight;
+        border: 1px solid $text-primary;
         border-top-width: 0;
         border-right-width: 0;
         width: 0.45rem;
@@ -107,7 +107,7 @@
       background-color: $white;
 
       &::before {
-        background-color: $text-highlight;
+        background-color: $text-primary;
         width: 12px;
         height: 12px;
         transform: scale(0);

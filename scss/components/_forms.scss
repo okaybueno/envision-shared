@@ -13,13 +13,13 @@
   box-sizing: border-box;
   padding: $input-padding;
   outline: none;
-  border: 1px solid $input-border-color;
+  border: 1px solid $grey-light;
   border-radius: $border-radius;
   background-color: $white;
   color: $black;
 
   &:focus {
-    border: 1px solid $input-border-color;
+    border: 1px solid $grey-light;
     outline: none;
   }
 
@@ -32,7 +32,7 @@
   height: $input-height;
 
   &__label {
-    color: $label-color;
+    color: $blue-dark;
     opacity: 0.7;
     margin-bottom: 5px;
     white-space: nowrap;
