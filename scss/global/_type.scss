@@ -136,6 +136,7 @@ li {
 a {
   outline: none;
   font-size: 1.125rem;
+  cursor: pointer;
 
   @include mq('desktop') {
     font-size: $size-s;
