@@ -41,6 +41,7 @@ textarea,
 li,
 a,
 p {
+  position: relative;
   font-family: inherit;
   color: inherit;
 }
@@ -49,6 +50,7 @@ h1,
 h2,
 h3,
 h4 {
+  position: relative;
   cursor: default;
 }
 
