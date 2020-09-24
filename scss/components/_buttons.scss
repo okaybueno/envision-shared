@@ -115,11 +115,7 @@
   width: 100%;
   align-items: center;
   flex-grow: 1;
-
-  @include mq('tablet-small') {
-    justify-content: flex-end;
-  }
-
+  
   .button {
     &:not(:first-child) {
       @include property-with-gutter('margin-left', 'inner');
