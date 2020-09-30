@@ -39,7 +39,7 @@
     font-family: 'Suisse Intl Medium', sans-serif;
 
     &--error {
-      color: $alert;
+      color: $alert !important;
     }
   }
 }
