@@ -176,6 +176,7 @@ label {
 input, textarea {
   line-height: 100%;
   font-size: .875rem;
+  text-overflow: ellipsis;
 
   &::placeholder {
     font-family: 'Suisse Intl', sans-serif;

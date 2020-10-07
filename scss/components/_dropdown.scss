@@ -84,6 +84,7 @@ $dropdown-item-active-bg: $grey-light-bg;
     z-index: 2;
     cursor: pointer;
     width: 100%;
+    padding-right: 26px;
 
     &--placeholder {
       color: $placeholder-color;
