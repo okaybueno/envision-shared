@@ -47,6 +47,10 @@
     position: relative;
     top: 1px;
 
+    &:hover {
+      opacity: .72;
+    }
+
     &--error {
       color: $alert !important;
     }
@@ -75,6 +79,10 @@
     &::before {
       content: "";
       position: relative;
+    }
+
+    &:hover {
+      opacity: .72;
     }
 
     &--normal {
