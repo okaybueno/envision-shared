@@ -58,7 +58,8 @@ h4 {
 h1 {
   font-family: 'Suisse Intl Medium', sans-serif;
   font-size: 2.75rem;
-  line-height: 100%;
+  //line-height: 100%;
+  line-height: 110%;
 
   @include mq('tablet') {
     font-size: 3rem;
@@ -86,7 +87,8 @@ h2 {
 h3 {
   font-family: 'Suisse Intl SemiBold', sans-serif;
   font-size: 1.5rem;
-  line-height: 140%;
+  //line-height: 140%;
+  line-height: 132%;
 
   @include mq('desktop') {
     font-size: 1.625rem;
@@ -121,7 +123,7 @@ a,
 li,
 input,
 textarea {
-  font-size: 15px;
+  font-size: 14px;
 
   @include mq('desktop') {
     font-size: 1rem;
@@ -136,7 +138,8 @@ button {
 
 p,
 li {
-  line-height: 160%;
+  // line-height: 160%;
+  line-height: 150%;
 }
 
 a {
