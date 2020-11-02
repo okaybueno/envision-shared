@@ -108,35 +108,6 @@
       transform: unset;
     }
   }
-
-  &--circle-swiper {
-    @include card();
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    margin-bottom: 0;
-
-    height: 48px;
-    width: 48px;
-
-    border-radius: 50%;
-    outline: none;
-
-    @include mq('desktop') {
-      height: 64px;
-      width: 64px;
-    }
-
-    &.swiper-button-prev, &.swiper-button-next {
-      margin-top: 0;
-      z-index: 0;
-    }
-
-    &.swiper-button-prev {
-      margin-right: $size-xl;
-    }
-  }
 }
 
 .button-container {
@@ -149,6 +120,35 @@
     &:not(:first-child) {
       @include property-with-gutter('margin-left', 'inner');
     }
+  }
+}
+
+.button-circle-swiper {
+  @include card();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 0;
+
+  height: 48px;
+  width: 48px;
+
+  border-radius: 50%;
+  outline: none;
+
+  @include mq('desktop') {
+    height: 64px;
+    width: 64px;
+  }
+
+  &.swiper-button-prev, &.swiper-button-next {
+    margin-top: 0;
+    z-index: 0;
+  }
+
+  &.swiper-button-prev {
+    margin-right: $size-xl;
   }
 }
 
