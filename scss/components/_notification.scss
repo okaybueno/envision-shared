@@ -1,0 +1,48 @@
+$nav-height: 4.75rem !default;
+.notification {
+  @include grid-wrapper();
+  position: fixed;
+  top: $nav-height;
+  z-index: z('notification');
+
+  padding-top: $size-base;
+  padding-bottom: $size-base;
+  background: linear-gradient(126.85deg, #E9C2AE 0%, #E7BEC8 20.56%, #D4AFCE 45.5%, #B59ACF 72.59%, #7A75C2 97.1%);
+
+  @include mq('tablet') {
+    background: linear-gradient(157.06deg, #F1CA98 0.36%, #E9C2AC 4.61%, #E7BDCB 21.17%, #C0A1D1 53.03%, #857CC8 71.26%, #434FA1 84.31%, #2B397D 97.58%);
+  }
+  @include mq('desktop') {
+    background: linear-gradient(163.25deg, #F1CA98 0.36%, #E9C2AC 4.61%, #E7BDCB 21.17%, #C0A1D1 53.03%, #857CC8 71.26%, #434FA1 84.31%, #2B397D 97.58%);
+  }
+
+  &__text {
+    p {
+      font-size: $size-s;
+      letter-spacing: 0.02em;
+      padding-right: $size-xxs;
+    }
+
+    a {
+      font-family: 'Suisse Intl SemiBold', sans-serif;
+      font-size: $size-s;
+      letter-spacing: 0.02em;
+      position: relative;
+      white-space: nowrap;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -$size-xxs;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        width: 6px;
+        height: 6px;
+        border: 2px solid $black;
+        border-top-width: 0;
+        border-left-width: 0;
+      }
+    }
+  }
+
+}
