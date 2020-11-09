@@ -30,18 +30,18 @@ $nav-height: 4.75rem !default;
       position: relative;
       white-space: nowrap;
 
-      &:after {
-        content: '';
-        position: absolute;
-        right: -$size-xxs;
-        top: 50%;
-        transform: translateY(-50%) rotate(-45deg);
-        width: 6px;
-        height: 6px;
-        border: 2px solid $black;
-        border-top-width: 0;
-        border-left-width: 0;
-      }
+      //&:after {
+      //  content: '';
+      //  position: absolute;
+      //  right: -$size-xxs;
+      //  top: 50%;
+      //  transform: translateY(-50%) rotate(-45deg);
+      //  width: 6px;
+      //  height: 6px;
+      //  border: 2px solid $black;
+      //  border-top-width: 0;
+      //  border-left-width: 0;
+      //}
     }
   }
 
