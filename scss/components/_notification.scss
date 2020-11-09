@@ -3,6 +3,7 @@ $nav-height: 4.75rem !default;
   @include grid-wrapper();
   position: fixed;
   top: $nav-height;
+  left: 0;
   z-index: z('notification');
 
   padding-top: $size-base;
