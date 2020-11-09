@@ -115,11 +115,10 @@
   width: 100%;
   align-items: center;
   flex-grow: 1;
-  
+
   .button {
     &:not(:first-child) {
       @include property-with-gutter('margin-left', 'inner');
     }
   }
 }
-
